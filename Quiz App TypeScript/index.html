@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TypeScript Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-card">
+      <div class="header">
+        <h2 class="title">TypeScript Quiz App</h2>
+
+        <div class="timer-wrapper" id="timer-wrapper">
+          <div class="circle" id="circle">
+            <span id="time">20</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="counter">1/10</div>
+
+      <div id="quiz-container">
+        <h3 id="question"></h3>
+        <div id="options"></div>
+
+        <div class="buttons">
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn" disabled>Next</button>
+        </div>
+      </div>
+
+      <div id="result" class="hidden"></div>
+    </div>
+
+    <script type="module" src="dist/main.js"></script>
+  </body>
+</html>

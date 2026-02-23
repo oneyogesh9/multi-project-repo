@@ -1,0 +1,144 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #afbcf5, #77618d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.quiz-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#counter {
+  font-weight: bold;
+  color: #555;
+}
+
+.timer-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Circular Timer */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#6200ea 360deg, #e0e0e0 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background 1s linear;
+}
+
+.circle::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle span {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: #6200ea;
+}
+
+#question {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#options label {
+  display: block;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #fafafa;
+}
+
+#options label:hover {
+  background: #ede7f6;
+  border-color: #6200ea;
+}
+
+#options input {
+  margin-right: 10px;
+  color: #6200ea;
+}
+
+#options input:checked + span {
+  font-weight: bold;
+  color: #6200ea;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 16px 64px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#prevBtn {
+  background: #e0e0e0;
+}
+
+#prevBtn:hover {
+  background: #ccc;
+}
+
+#nextBtn {
+  background: #6200ea;
+  color: white;
+}
+
+#nextBtn:hover:not(:disabled) {
+  background: #3700b3;
+}
+
+button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
