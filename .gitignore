@@ -1,0 +1,29 @@
+# dependencies
+/node_modules
+**/node_modules/
+ 
+# testing
+/coverage
+/reports
+ 
+# next.js
+/.next/
+/out/
+ 
+# production
+/build
+**/build/
+
+ 
+ # env files (can opt-in for commiting if needed)
+.env*
+
+# intellij
+.idea
+
+# local environment config
+.env.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
